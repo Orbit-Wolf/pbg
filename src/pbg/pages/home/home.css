@@ -2,5 +2,17 @@
 
 }
 
-.home .hero {
+.home .hero  {
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+
+    background-color: #464646;
+    width: 100%;
+    min-height: 650px;
+}
+
+.home .hero h1 {
+    margin: 0;
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import "./navbar.css"
 
+import logo from './logo.png'
+
 class NavBar extends React.Component {
     state = {
 
@@ -9,17 +11,20 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="navbar">
-                {/*<div className="logo">*/}
-                {/*    <a href="/">*/}
-                {/*        <img />*/}
-                {/*    </a>*/}
-                {/*</div>*/}
+                <div className="logo">
+                    <a href="/">
+                        <img src={logo} alt="logo"/>
+                    </a>
+                </div>
                 <ul>
                     <li>
-                        Portfolio
+                        QUEM SOMOS
                     </li>
                     <li>
-                        Contato
+                        PORTFOLIO
+                    </li>
+                    <li>
+                        CONTATO
                     </li>
                 </ul>
             </div>

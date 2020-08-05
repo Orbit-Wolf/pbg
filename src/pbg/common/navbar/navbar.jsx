@@ -18,19 +18,18 @@ class NavBar extends React.Component {
                 </div>
                 <ul>
                     <li>
-                        QUEM SOMOS
+                        <a href="#about">QUEM SOMOS</a>
                     </li>
                     <li>
-                        PORTFOLIO
+                        <a href="#portifolio">PORTFOLIO</a>
                     </li>
                     <li>
-                        CONTATO
+                        <a href="#contact">CONTATO</a>
                     </li>
                 </ul>
             </div>
         )
     }
-
 }
 
 export default NavBar

@@ -1,18 +1,60 @@
-.home {
-
-}
-
 .home .hero  {
+    background-color: #464646;
     background-position: center center;
     background-repeat: no-repeat;
     /*background-attachment: fixed;*/
     background-size: cover;
+    color: white;
 
-    background-color: #464646;
-    width: 100%;
     min-height: 650px;
+    position: relative;
+    width: 100%;
+}
+
+.home .hero .main {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .home .hero h1 {
+    color: white;
+    font-size: 40px;
+    margin: 0 0 15px 0;
+}
+
+.home .hero h2 {
+    color: white;
+    font-size: 16px;
     margin: 0;
+}
+
+.home .hero h2 a {
+    color: #ff8a00;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.home .hero .hero-more {
+    bottom: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    width: 150px;
+}
+
+.home .hero .hero-more i {
+    color: white;
+    font-size: 130px;
 }

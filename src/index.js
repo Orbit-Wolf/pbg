@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './pbg/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+ReactDOM.render (
   <React.StrictMode>
     <App/>
   </React.StrictMode>,

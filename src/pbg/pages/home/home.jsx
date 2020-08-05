@@ -1,8 +1,10 @@
 import React from 'react'
+import '../../global.css'
 import './home.css'
 
 import NavBar from "../../common/navbar/navbar"
 import Footer from "../../common/footer/footer"
+import Contact from "../../common/contact/contact"
 
 import hero from "./hero.jpg"
 
@@ -42,17 +44,32 @@ class Home extends React.Component {
                     <NavBar/>
                 </header>
 
-                <div className="hero" style={{backgroundImage: `url(${hero})`, height: backgroundHeight}}>
-                    <h1>
-                        PBG <br/> Entender para Atender
-                    </h1>
+                <div className="hero" id="main" style={{backgroundImage: `url(${hero})`, height: backgroundHeight}}>
+                    <div className="main">
+                        <h1>
+                            ENTENDER PARA ATENDER
+                        </h1>
+                        <h2>
+                            Atuamos na área de engenharia.
+                            Nosso objetivo é sempre fazer o melhor,
+                            <br/>
+                            buscando sempre a excelência em nossos trabalhos.
+                            <br/>
+                            Aproveite, fazemos <a href="/" className="primary-color">consultoria gratis!</a>
+                        </h2>
+                    </div>
+
+                    <div className="hero-more">
+                        <i className="material-icons">expand_more</i>
+                    </div>
                 </div>
 
-                <div style={{height: 500}}>
+                <div style={{height: 800}}>
 
                 </div>
-
+                {/*<Contact/>*/}
                 <footer>
+                    <div style={{height: 500, backgroundColor: "gray"}}/>
                     {/*<Footer/>*/}
                 </footer>
             </div>

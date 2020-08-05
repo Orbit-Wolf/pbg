@@ -12,7 +12,7 @@ class NavBar extends React.Component {
         return (
             <div className="navbar">
                 <div className="logo">
-                    <a href="/">
+                    <a href="#main">
                         <img src={logo} alt="logo"/>
                     </a>
                 </div>

@@ -1,0 +1,8 @@
+.contact {
+    bottom: 0;
+    background-color: #dd6a32;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}

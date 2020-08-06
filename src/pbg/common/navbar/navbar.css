@@ -12,6 +12,11 @@
     z-index: 5000;
 }
 
+.navbar a {
+    color: inherit;
+    text-decoration: unset;
+}
+
 .navbar .logo {
     display: flex;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./navbar.css"
 
-import logo from './logo.png'
+import logo from '../../static/images/logo.png'
 
 class NavBar extends React.Component {
     state = {
@@ -18,13 +18,13 @@ class NavBar extends React.Component {
                 </div>
                 <ul>
                     <li>
-                        QUEM SOMOS
+                        <a href="#about">QUEM SOMOS</a>
                     </li>
                     <li>
                         PORTFOLIO
                     </li>
                     <li>
-                        CONTATO
+                        ORGAÇAMENTO GRATIS!
                     </li>
                 </ul>
             </div>

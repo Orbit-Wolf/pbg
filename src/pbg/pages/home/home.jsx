@@ -3,6 +3,7 @@ import '../../global.css'
 import './home.css'
 
 import NavBar from "../../common/navbar/navbar"
+import About from "../../common/about/about"
 import Footer from "../../common/footer/footer"
 import Contact from "../../common/contact/contact"
 
@@ -64,13 +65,14 @@ class Home extends React.Component {
                     </div>
                 </div>
 
-                <div style={{height: 800}}>
+                <About/>
 
-                </div>
-                {/*<Contact/>*/}
+                <div style={{height: 600, backgroundColor: "#ececec"}}/>
+
+
+                <Contact/>
                 <footer>
-                    <div style={{height: 500, backgroundColor: "gray"}}/>
-                    {/*<Footer/>*/}
+                    <Footer/>
                 </footer>
             </div>
         )

@@ -4,8 +4,10 @@ import './home.css'
 
 import NavBar from "../../common/navbar/navbar"
 import About from "../../common/about/about"
-import Footer from "../../common/footer/footer"
+import Service from "../../common/service/service"
+import Portfolio from "../../common/portfolio/portfolio"
 import Contact from "../../common/contact/contact"
+import Footer from "../../common/footer/footer"
 
 import hero from "./hero.jpg"
 
@@ -67,10 +69,12 @@ class Home extends React.Component {
 
                 <About/>
 
-                <div style={{height: 600, backgroundColor: "#ececec"}}/>
+                <Service/>
 
+                <Portfolio/>
 
                 <Contact/>
+
                 <footer>
                     <Footer/>
                 </footer>

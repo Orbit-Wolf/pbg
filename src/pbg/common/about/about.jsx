@@ -2,7 +2,6 @@ import React from 'react'
 import './about.css'
 
 import logo from '../../static/images/logo.png'
-import about from './about.jpg'
 
 class About extends React.Component {
 

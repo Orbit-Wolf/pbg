@@ -1,0 +1,35 @@
+.contact {
+    width: 100%;
+}
+
+.contact h2 {
+    font-size: 45px;
+    color: #fea501;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    height: 500px;
+    text-align: center;
+    width: 50%;
+}
+
+.contact-map {
+    width: 50%;
+    position: relative;
+}
+
+.contact-map .map-center {
+    height: 350px;
+    margin: 0 auto 0 auto;
+    width: 550px;
+}
+
+
+

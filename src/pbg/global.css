@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body {
-    margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .primary-color {
-    color: #dd6a32;
+    color: #ff5500;
 }

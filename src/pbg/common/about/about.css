@@ -1,0 +1,52 @@
+.about {
+    border-bottom: 5px solid #fea501;
+    color: #2F2E2E;
+    height: auto;
+    margin: 0 100px 0 100px;
+    padding-top: 85px;
+}
+
+.about-image img {
+    background-size: cover;
+
+}
+
+.about h2 {
+    font-size: 30px;
+    margin: 0 0 55px 0;
+    color: #494949;
+    text-align: center;
+}
+
+.about-info {
+    display: inline-flex;
+}
+
+.about-logo {
+    width: 150px;
+}
+
+
+.about-text {
+    padding: 0 15px 40px 0;
+    text-align: justify;
+    width: 50%;
+}
+
+.about-diff {
+    padding-left: 15px;
+    width: 50%;
+}
+
+.about-diff div {
+    height: 100%;
+    background-color: #fea501;
+}
+
+.about-diff h3 {
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}

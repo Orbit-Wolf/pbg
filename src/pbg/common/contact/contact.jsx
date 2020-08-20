@@ -1,6 +1,6 @@
 import React from 'react'
 import './contact.css'
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+// import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 
 export class Contact extends React.Component {
@@ -35,7 +35,9 @@ export class Contact extends React.Component {
     }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ("AIzaSyD-mvB-8DQ8YByYIuYbyU7wXtQIS12yd28")
-})(Contact)
+// export default GoogleApiWrapper({
+//   apiKey: ("AIzaSyD-mvB-8DQ8YByYIuYbyU7wXtQIS12yd28")
+// })(Contact)
+
+export default Contact
 

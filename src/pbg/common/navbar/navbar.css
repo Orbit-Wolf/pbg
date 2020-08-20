@@ -2,19 +2,54 @@
     align-items: center;
     background-color: #dd6a321a;
     display: flex;
-    height: 100%;
-    padding: 15px 30px 15px 30px;
+    height: 45px;
+    padding: 15px 0 15px 0;
     position: absolute;
-    max-height: 45px;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5000;
-    transition: all 2s ease-in-out;
 }
 
-.fixed {
+/* region Navbar animation */
+
+.navbar-enter {
+    position: fixed !important;
+    top: -85px;
+}
+
+.navbar-enter-done {
+    position: fixed !important;
+    top: 0;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.navbar-exit {
+    position: fixed !important;
+    top: -85px;
+    transition: all 0.3s;
+}
+
+/* endregion Navbar animation */
+
+
+
+
+.navbar-anim-enter {
     position: fixed;
+    top: 0px
+}
+
+
+.navbar-show {
+    position: fixed;
+    transition: all 0.2s linear;
+    top: 0;
+}
+
+.navbar-hidden {
+
 }
 
 .navbar a {
@@ -24,6 +59,7 @@
 
 .navbar .logo {
     display: flex;
+    margin-left: 30px;
 }
 
 .navbar .logo  img {

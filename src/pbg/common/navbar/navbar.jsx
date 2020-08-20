@@ -1,11 +1,13 @@
 import React from "react";
+import { CSSTransition } from 'react-transition-group'
+
 import "./navbar.css"
 
 import logo from '../../static/images/logo.png'
 
 class NavBar extends React.Component {
     state = { 
-        fixed : true,
+        fixed : false,
         height : 0
     }
 
@@ -35,27 +37,33 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const {fixed} = this.state
-        console.log(window.pageYOffset)
+        const { fixed } = this.state
         return (
-            <div className={fixed ? 'navbar fixed' : 'navbar'}>
-                <div className="logo">
-                    <a href="#main">
-                        <img src={logo} alt="logo"/>
-                    </a>
+            <CSSTransition
+                in={fixed}
+                classNames="navbar"
+                timeout={150}
+                appear
+            >
+                <div className="navbar">
+                    <div className="logo">
+                        <a href="#main">
+                            <img src={logo} alt="logo"/>
+                        </a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#about">QUEM SOMOS</a>
+                        </li>
+                        <li>
+                            <a href="#portifolio">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTATO</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>
-                        <a href="#about">QUEM SOMOS</a>
-                    </li>
-                    <li>
-                        <a href="#portifolio">PORTFOLIO</a>
-                    </li>
-                    <li>
-                        <a href="#contact">CONTATO</a>
-                    </li>
-                </ul>
-            </div>
+            </CSSTransition>
         )
     }
 }

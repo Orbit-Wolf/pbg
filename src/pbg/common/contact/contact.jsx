@@ -6,7 +6,7 @@ import './contact.css'
 export class Contact extends React.Component {
     render() {
         return (
-            <div className="contact">
+            <div className="contact" id="contact">
                 <h2>Contato</h2>
                 <div className="contact-container">
                     <div className="contact-form">
@@ -35,9 +35,6 @@ export class Contact extends React.Component {
     }
 }
 
-// export default GoogleApiWrapper({
-//   apiKey: ("AIzaSyD-mvB-8DQ8YByYIuYbyU7wXtQIS12yd28")
-// })(Contact)
-
 export default Contact
+
 

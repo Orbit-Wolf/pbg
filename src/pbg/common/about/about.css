@@ -26,7 +26,6 @@
     width: 150px;
 }
 
-
 .about-text {
     padding: 0 15px 40px 0;
     text-align: justify;
@@ -39,8 +38,9 @@
 }
 
 .about-diff div {
-    height: 100%;
     background-color: #fea501;
+    border-radius: 5px 5px 0 0;
+    height: 100%;
 }
 
 .about-diff h3 {

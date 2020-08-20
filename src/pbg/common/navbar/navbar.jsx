@@ -28,7 +28,7 @@ class NavBar extends React.Component {
 
     fixed = () => {
         let height = this.state.height
-        if (window.pageYOffset > height) {
+        if (window.pageYOffset > height - 1) {
             this.setState({fixed: true})
         }
         else {
@@ -56,7 +56,10 @@ class NavBar extends React.Component {
                             <a href="#about">QUEM SOMOS</a>
                         </li>
                         <li>
-                            <a href="#portifolio">PORTFOLIO</a>
+                            <a href="#service">SERVIÇOS</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">PORTFÓLIO</a>
                         </li>
                         <li>
                             <a href="#contact">CONTATO</a>

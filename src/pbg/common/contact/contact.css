@@ -56,13 +56,38 @@ button {
 
 :focus{outline: none;}
 
-.col-3{float: left; width: 28.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
-input[type="text"],input[type="email"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+.col-3{float: none; width: 28.33%; margin: 2% 35%; position: relative;} /* necessary to give position: relative to parent. */
+input{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+textarea{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px; resize: none;}
 
 .effect-1 {border: 0; padding: 7px 0; border-bottom: 1px solid #ccc;}
 
-.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color:#fea501; transition: 0.4s;}
 .effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
 
+#appearance-select{
+    -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+    -moz-appearance: none; /* Remove estilo padrão do FireFox */
+    appearance: none; /* Remove estilo padrão do FireFox*/
+    width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border:1px solid #fea501;
+    padding-left: 4px;
+}
 
+h3{
+    color:#fea501;
+    font-weight: bold;
+}
 
+button{
+   background-color: #fea501;
+}
+
+button:hover{
+    background-color: #fea501c5;
+}
+
+button:active{
+    background-image: linear-gradient(#fe7b01e7, #fea50133);
+}

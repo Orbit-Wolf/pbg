@@ -1,16 +1,38 @@
 .navbar {
     align-items: center;
-    background-color: #dd6a321a;
+    background-color: transparent;
     display: flex;
-    height: 100%;
-    padding: 15px 30px 15px 30px;
-    position: fixed;
-    max-height: 45px;
+    height: 45px;
+    padding: 15px 0 15px 0;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 5000;
 }
+
+/* region Navbar animation */
+
+.navbar-enter {
+    position: fixed !important;
+    top: -85px;
+}
+
+.navbar-enter-done {
+    position: fixed !important;
+    top: 0px;
+    background-color: black;
+    transition: all 0.3s;
+}
+
+.navbar-exit {
+    position: fixed !important;
+    top: -85px;
+    transition: all 0.3s;
+}
+
+/* endregion Navbar animation */
+
 
 .navbar a {
     color: inherit;
@@ -19,6 +41,7 @@
 
 .navbar .logo {
     display: flex;
+    margin-left: 30px;
 }
 
 .navbar .logo  img {

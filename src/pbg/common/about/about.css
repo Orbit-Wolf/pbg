@@ -34,7 +34,7 @@
 
 .about-diff {
     padding-left: 15px;
-    width: 50%;
+    display: flex;
 }
 
 .about-diff div {
@@ -50,3 +50,22 @@
     margin: 0;
     text-align: center;
 }
+
+.about-diff p {
+    padding: 50px 50px 50px 50px;
+    color: white;
+}
+
+.about-diff svg {
+    height: 50px;
+    width: 50px;
+    padding: 50px 50px 50px 50px;
+    fill: white;
+}
+
+.AdvantagesIconSet {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 80px 80px 80px;
+}
+

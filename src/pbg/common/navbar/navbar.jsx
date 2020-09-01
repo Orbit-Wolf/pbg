@@ -8,7 +8,8 @@ import logo from '../../static/images/logo.png'
 class NavBar extends React.Component {
     state = { 
         fixed : false,
-        height : 0
+        height : 0,
+        prevYOffset : 0
     }
 
     componentDidMount() {
@@ -29,7 +30,13 @@ class NavBar extends React.Component {
     fixed = () => {
         let height = this.state.height
         if (window.pageYOffset > height - 1) {
-            this.setState({fixed: true})
+            if (this.state.prevYOffset < window.pageYOffset) {
+                this.setState({prevYOffset : window.pageYOffset})
+                this.setState({fixed: false})
+            }
+            else {
+                this.setState({fixed: true})
+            }
         }
         else {
             this.setState({fixed: false})

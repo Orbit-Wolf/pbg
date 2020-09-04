@@ -15,10 +15,7 @@ class About extends React.Component {
                     <img className="about-logo" src={logo} alt="logo"/>
                         <p>Entender para atender</p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed dolor fringilla tellus
-                            pharetra convallis eu id mauris. Suspendisse potenti. Ut non nibh eget lorem congue tristique
-                            sed eu felis. Nam dignissim convallis tortor. Nunc venenatis est eu ex fermentum, non commodo
-                            velit dictum. Duis hendrerit, velit dapibus ullamcorper euismod, ex ante laoreet urna, vitae
+                        Engenharia Civil é a área da Engenharia responsável pelo atendimento de funções básicas visando o bem-estar, a proteção ambiental e o desenvolvimento da sociedade, através de sua atuação científica, tecnológica e administrativa, em obras e serviços tais como: pontes, barragens, estruturas portuárias, estradas, aeroportos, sistema de água e esgoto, edificações, etc, tendo como parâmetros a qualidade, segurança, funcionalidade e economia.
                         </p>
                      </div>
                     <div className="about-diff">
@@ -39,7 +36,6 @@ class About extends React.Component {
                                 </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

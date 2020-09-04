@@ -1,8 +1,6 @@
 .about {
-    border-bottom: 5px solid #fea501;
     color: #2F2E2E;
     height: auto;
-    margin: 0 100px 0 100px;
     padding-top: 85px;
 }
 
@@ -27,7 +25,7 @@
 }
 
 .about-text {
-    padding: 0 15px 40px 0;
+    padding: 0 15px 40px 50px ;
     text-align: justify;
     width: 50%;
 }
@@ -35,12 +33,14 @@
 .about-diff {
     padding-left: 15px;
     display: flex;
+    width: 50%;
 }
 
 .about-diff div {
     background-color: #fea501;
     border-radius: 5px 5px 0 0;
     height: 100%;
+    width: 100%;
 }
 
 .about-diff h3 {
@@ -52,14 +52,15 @@
 }
 
 .about-diff p {
-    padding: 50px 50px 50px 50px;
+    padding: 20px 20px 20px 20px;
     color: white;
+    max-width: 500px;
 }
 
 .about-diff svg {
     height: 50px;
     width: 50px;
-    padding: 50px 50px 50px 50px;
+    padding: 20px 20px 20px 20px;
     fill: white;
 }
 

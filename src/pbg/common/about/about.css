@@ -6,7 +6,6 @@
 
 .about-image img {
     background-size: cover;
-
 }
 
 .about h2 {
@@ -31,16 +30,11 @@
 }
 
 .about-diff {
-    padding-left: 15px;
-    display: flex;
-    width: 50%;
-}
-
-.about-diff div {
     background-color: #fea501;
     border-radius: 5px 5px 0 0;
+    padding-left: 15px;
+    width: 50%;
     height: 100%;
-    width: 100%;
 }
 
 .about-diff h3 {
@@ -52,9 +46,10 @@
 }
 
 .about-diff p {
-    padding: 20px 20px 20px 20px;
     color: white;
+    padding: 5px 20px 20px 20px;
     max-width: 500px;
+    text-align: justify;
 }
 
 .about-diff svg {
@@ -64,7 +59,13 @@
     fill: white;
 }
 
-.AdvantagesIconSet {
+.about-diff .about-diff-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-diff .about-diff-container div {
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: 80px 80px 80px;

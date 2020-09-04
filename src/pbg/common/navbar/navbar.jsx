@@ -49,7 +49,7 @@ class NavBar extends React.Component {
             <CSSTransition
                 in={fixed}
                 classNames="navbar"
-                timeout={150}
+                timeout={100}
                 appear
             >
                 <div className="navbar">

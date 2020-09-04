@@ -1,9 +1,9 @@
 .portfolio {
-    height: 1100px;
+    align-items: center;
     background-color: #fea501;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    height: 950px;
 }
 
 .portfolio h2 {
@@ -15,14 +15,14 @@
 
 .portfolio-images {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 200px 200px 200px 200px;
+    padding-right: 15px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, 250px);
     gap: 20px;
-
 }
 
 .portfolio-images img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
     padding: 10px 10px 10px 10px;
+    width: 250px;
 }

@@ -31,7 +31,6 @@ class Portfolio extends React.Component {
             )}
         )
 
-
         return renderImages
     }
 
@@ -39,7 +38,6 @@ class Portfolio extends React.Component {
 
     render() {
         const { images } = this.state
-        console.log(images)
         return (
             <div className="portfolio" id="portfolio">
                 <h2>PORTOFILIO</h2>

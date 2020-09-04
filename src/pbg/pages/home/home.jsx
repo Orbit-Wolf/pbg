@@ -1,4 +1,5 @@
 import React from 'react'
+import { CSSTransition  } from 'react-transition-group'
 import '../../global.css'
 import './home.css'
 
@@ -14,11 +15,16 @@ import hero from "./hero.jpg"
 class Home extends React.Component {
     state = {
         backgroundHeight: 0,
+        slide: false,
     }
 
     componentDidMount() {
         window.addEventListener("resize", this.handleWindowResize)
         this.windowResize()
+
+        setTimeout(() => {
+            console.log('a')
+            this.setState({slide: true})},500)
     }
 
     componentWillUnmount() {
@@ -39,7 +45,8 @@ class Home extends React.Component {
     }
 
     render() {
-        const { backgroundHeight } = this.state
+        const { backgroundHeight, slide } = this.state
+        console.log(slide)
         return (
             <div className="home">
                 <header>
@@ -47,23 +54,32 @@ class Home extends React.Component {
                 </header>
 
                 <div className="hero" id="main" style={{backgroundImage: `url(${hero})`, height: backgroundHeight}}>
-                    <div className="main">
-                        <h1>
-                            ENTENDER PARA ATENDER
-                        </h1>
-                        <h2>
-                            Atuamos na área de engenharia.
-                            Nosso objetivo é sempre fazer o melhor,
-                            <br/>
-                            buscando sempre a excelência em nossos trabalhos.
-                            <br/>
-                            Aproveite, fazemos <a href="/" className="primary-color">consultoria gratis!</a>
-                        </h2>
-                    </div>
-
+                    <CSSTransition  in={slide}
+                                    timeout={2000}
+                                    classNames="slide-up"
+                                    unmountOnExit>
+                        <div className="main">
+                                <h1>
+                                    ENTENDER PARA ATENDER
+                                </h1>
+                                <p>
+                                    Atuamos na área de engenharia.
+                                    Nosso objetivo é sempre fazer o melhor,
+                                    <br/>
+                                    buscando sempre a excelência em nossos trabalhos.
+                                    <br/>
+                                    Aproveite, fazemos <a href="/" className="primary-color">consultoria gratis!</a>
+                                </p>
+                        </div>
+                    </CSSTransition>
+                    <CSSTransition  in={slide}
+                                    timeout={2000}
+                                    classNames="fade"
+                                    unmountOnExit>
                     <div className="hero-more">
                         <i className="material-icons">expand_more</i>
                     </div>
+                    </CSSTransition>
                 </div>
 
                 <About/>

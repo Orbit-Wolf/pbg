@@ -22,9 +22,7 @@ class Home extends React.Component {
         window.addEventListener("resize", this.handleWindowResize)
         this.windowResize()
 
-        setTimeout(() => {
-            console.log('a')
-            this.setState({slide: true})},500)
+        setTimeout(() => {this.setState({slide: true})},500)
     }
 
     componentWillUnmount() {
@@ -46,7 +44,6 @@ class Home extends React.Component {
 
     render() {
         const { backgroundHeight, slide } = this.state
-        console.log(slide)
         return (
             <div className="home">
                 <header>
@@ -68,7 +65,7 @@ class Home extends React.Component {
                                     <br/>
                                     buscando sempre a excelência em nossos trabalhos.
                                     <br/>
-                                    Aproveite, fazemos <a href="/" className="primary-color">consultoria gratis!</a>
+                                    Aproveite, fazemos <a href="#contact" className="primary-color">consultoria gratis!</a>
                                 </p>
                         </div>
                     </CSSTransition>

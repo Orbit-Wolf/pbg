@@ -1,104 +1,52 @@
 import React from 'react'
 import './contact.css'
-// import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 export class Contact extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {selectValue: '', nameValue: '', emailValue: '', cellValue: '', msgValue: '', clicked: false};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
-  }
-  
-  handleChange(event) {
-    this.setState({
-      selectValue: event.target.selectValue, 
-      nameValue: event.target.nameValue, 
-      emailValue: event.target.emailValue,
-      cellValue: event.target.cellValue,
-      msgValue: event.target.msgValue,
-    });
-  }
-  
-
-  handleSubmit(event) {
-    event.preventDefault();
-    setTimeout(()=>this.setState({clicked: false}), 5000);
-    this.setState({clicked: true});
-    this.setState({selectValue: ''});
-    this.setState({nameValue: ''});
-    this.setState({emailValue: ''});
-    this.setState({cellValue: ''});
-    this.setState({msgValue: ''});
+  state = {
+    form: {name: '', email: '', cellphone: '',},
+    selectValue: '',
+    msgValue: '',
   }
 
   render() {
-    const clicked = this.state.clicked;
+    const { form } = this.state
     return (
-      <div className="contact">
-        <h2>Contato</h2>
+      <div className="contact" id="contact">
+        <h2>CONTATO</h2>
         <div className="contact-container">
-          
           <div className="contact-form">
-            <div className="contac-text">
-              <h3>Fale conosco!</h3>
-              <p>
-                Olá! Preencha o formulário e retornaremos seu email!
-              </p>
-            </div>
             <form className="form-box">
-
               <div className="col-3">
-                <input className="effect-1" type="text" value={this.state.nameValue} onChange={this.handleChange}
-                placeholder="Nome"
-                name="name" 
-                id="nameInput"/>
+                <input className="effect-1" type="text" value={form.name} placeholder="Nome"  name="name"/>
                 <span className="focus-border"/>
               </div>
 
               <div className="col-3">
-                <input className="effect-1" type="email" value={this.state.emailValue} onChange={this.handleChange}
-                id="emailInput"
-                placeholder="Email@domain.com"
-                name="email" />
+                <input className="effect-1" type="email" value={form.email} placeholder="email@domain.com" name="email" />
                 <span className="focus-border"/>
               </div>
 
               <div className="col-3">
-                <input className="effect-1" type="tel" maxLength="12"
-                value={this.state.cellValue} onChange={this.handleChange}
-                id="cellInput"
-                placeholder="Telefone"
-                name="cell" />
+                <input className="effect-1" type="tel" maxLength="12" value={form.cellphone} placeholder="Celular" name="cell" />
                 <span className="focus-border"/>
               </div>
 
               <div className="col-3">
-                <p>Escolha o tipo de mensagem</p>
-                <select value={this.state.selectValue} onChange={this.handleChange} id="appearance-select">
+                <select value={this.state.selectValue}  id="appearance-select">
                   <option value="Elogio">Elogio</option>
                   <option value="Orçamento">Orçamento</option>
                   <option value="Sugestao">Sugestão</option>
-                  <option value="Outros">Outros</option>
+                  <option value="other">Outros</option>
                 </select>
               </div>
 
               <div className="col-3">
-                <textarea cols="45"
-                id="msgInput"
-                placeholder="Mensagem" 
-                name="msg"
-                value={this.state.msgValue} onChange={this.handleChange} 
-                >
-                </textarea>
+                <textarea cols="45" placeholder="Mensagem" name="msg" value={this.state.msgValue} />
                 <span className="focus-border"/>
               </div>
         
               <div className="col-3">
-                <button onClick={this.handleSubmit}>Enviar Email</button>
+                <button onClick={this.handleSubmit}>Enviar</button>
               </div>
 
               {this.state.clicked === true && 
@@ -116,7 +64,6 @@ export class Contact extends React.Component {
             </div>
           </div>
         </div>
-
       </div>
     )
   }

@@ -1,12 +1,24 @@
 import React from 'react'
 import './contact.css'
 
-export class Contact extends React.Component {
+class Contact extends React.Component {
   state = {
-    form: {name: '', email: '', cellphone: '',},
-    selectValue: '',
-    msgValue: '',
+    form: {name: '', email: '', message: ''},
   }
+
+  handleChangeForm = type => event => {
+    this.setState({
+      form: {
+        [type]: event.target.value,
+      }
+    })
+  }
+
+  changeForm = target => {
+
+  }
+
+
 
   render() {
     const { form } = this.state
@@ -15,46 +27,31 @@ export class Contact extends React.Component {
         <h2>CONTATO</h2>
         <div className="contact-container">
           <div className="contact-form">
-            <form className="form-box">
-              <div className="col-3">
-                <input className="effect-1" type="text" value={form.name} placeholder="Nome"  name="name"/>
-                <span className="focus-border"/>
+            <form>
+              <div className="main-info">
+                <div>
+                  <input type="text" value={form.name} placeholder="Nome" name="name" onChange={this.handleChangeForm("name")} />
+                </div>
+                <div className="extra-info">
+                  <input type="email" value={form.email} placeholder="Email" name="email" onChange={this.handleChangeForm("email")} />
+                </div>
               </div>
 
-              <div className="col-3">
-                <input className="effect-1" type="email" value={form.email} placeholder="email@domain.com" name="email" />
-                <span className="focus-border"/>
+              <div>
+                <textarea cols="45" placeholder="Mensagem" name="msg" value={form.message} onChange={this.handleChangeForm("message")} />
               </div>
 
-              <div className="col-3">
-                <input className="effect-1" type="tel" maxLength="12" value={form.cellphone} placeholder="Celular" name="cell" />
-                <span className="focus-border"/>
-              </div>
-
-              <div className="col-3">
-                <select value={this.state.selectValue}  id="appearance-select">
-                  <option value="Elogio">Elogio</option>
-                  <option value="Orçamento">Orçamento</option>
-                  <option value="Sugestao">Sugestão</option>
-                  <option value="other">Outros</option>
-                </select>
-              </div>
-
-              <div className="col-3">
-                <textarea cols="45" placeholder="Mensagem" name="msg" value={this.state.msgValue} />
-                <span className="focus-border"/>
-              </div>
-        
-              <div className="col-3">
+              <div className="submit">
+                  <select value={this.state.selectValue}  id="appearance-select">
+                    <option value="Elogio">Elogio</option>
+                    <option value="Orçamento">Orçamento</option>
+                    <option value="Sugestao">Sugestão</option>
+                    <option value="other">Outros</option>
+                  </select>
                 <button onClick={this.handleSubmit}>Enviar</button>
               </div>
 
-              {this.state.clicked === true && 
-                <div className="col-3">
-                  <p>Entraremos em Contato!</p>
-                </div>
-              }
-            
+
             </form>
           </div>
 

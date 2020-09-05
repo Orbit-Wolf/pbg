@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
         let renderImages = []
         images.map(image => {
             renderImages.push(
-                <div className="portfolio-image">
+                <div className="portfolio-image" key={image}>
                     <img src={image}/>
                 </div>
             )}
